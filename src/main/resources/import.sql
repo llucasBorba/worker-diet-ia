@@ -27,3 +27,5 @@ VALUES (9, 'Carl Carlson', 82, 181, 38, 'Nenhuma', 'SURPLUS');
 
 INSERT INTO patient (id, name, weight, height, age, restrictions, caloricGoal)
 VALUES (10, 'Lenny Leonard', 85, 179, 39, 'Reducao de alcool', 'SURPLUS');
+
+ALTER TABLE patient ALTER COLUMN id RESTART WITH 11;
