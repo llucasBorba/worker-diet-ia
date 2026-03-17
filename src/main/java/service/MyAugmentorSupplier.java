@@ -10,7 +10,7 @@ import java.util.function.Supplier;
 public class MyAugmentorSupplier implements Supplier<RetrievalAugmentor> {
 
     @Inject
-    MyContentRetriever myRetriever; // O seu bean com o println
+    MyContentRetriever myRetriever;
 
     @Override
     public RetrievalAugmentor get() {
