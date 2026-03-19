@@ -13,6 +13,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
 
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class RagIngestor {
     public void onStart(@Observes StartupEvent ev) {
         // A. LOAD (Carregamento)
         // Varre a pasta 'rag' e transforma arquivos em objetos 'Document'.
-        var dir = Paths.get("src/main/resources/rag");
+        Path dir = Paths.get("src/main/resources/rag");
         List<Document> documents = FileSystemDocumentLoader.loadDocuments(dir, new ApacheTikaDocumentParser());
 
         // B. SPLIT (Fragmentação)
