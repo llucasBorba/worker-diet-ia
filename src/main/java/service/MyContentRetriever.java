@@ -23,7 +23,7 @@ public class MyContentRetriever implements ContentRetriever {
     @Inject
     public MyContentRetriever(EmbeddingStore<TextSegment> store, EmbeddingModel model) {
         // Configuramos o buscador para trazer os 2 pedaços mais relevantes
-        this.retriever = EmbeddingStoreContentRetriever.builder()
+        retriever = EmbeddingStoreContentRetriever.builder()
                 .embeddingStore(store)
                 .embeddingModel(model)
                 .maxResults(3)
